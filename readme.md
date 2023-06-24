@@ -1,4 +1,4 @@
-Made by a group of students working at [Polytech Nice Sophia](https://polytech.univ-cotedazur.fr/)
+Made by a group of students working at [Polytech Nice Sophia](https://polytech.univ-cotedazur.fr/) :
 @marcusaasjensen @rodriguezarthur @ChloeVandenbrulle
 
 # FLOPPA WEB - School Project (EN)
