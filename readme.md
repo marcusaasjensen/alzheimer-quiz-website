@@ -1,16 +1,59 @@
-# FLOPPA WEB - Projet PS6
+Made by a group of students working at [Polytech Nice Sophia](https://polytech.univ-cotedazur.fr/)
+@marcusaasjensen @rodriguezarthur @ChloeVandenbrulle
+
+# FLOPPA WEB - School Project (EN)
+
+## Important Site Usage Notes
+
+To access the caregiver section, you need to enter a basic PIN code that can be modified in the next screen.
+The secret code is "0000".
+
+## Healthchecks used in each service:
+
+The healthchecks used are located in the back-end and front-end services in the docker-compose.yml.
+They are used to verify if the back-end and front-end are still responsive by calling the curl command.
+
+For the back-end healthcheck, the command is:
+   "curl -f http://localhost:9428/api/status | grep 'ok' || exit 1"
+   Here, we use the URL http://localhost:9428/api/status because the healthcheck is called from inside the service.
+   api/status returns "ok" if everything is fine in the container.
+
+Similarly, for the front-end healthcheck:
+   "curl -f http://localhost:4200 || exit 1"
+   We use the URL http://localhost:4200 for the same reason as the back-end.
+   This command checks if the front-end link is functioning properly.
+
+## Users in the services:
+
+For both the back-end and front-end, the user is the one indicated in the Dockerfile.
+For the back-end service, the user is 'node'.
+For the front-end service, the user is 'nginx'.
+
+## Explanation of accessible services and URLs/ports:
+
+- Back-end: Access the back-end using the domain 'localhost' and port 8000.
+- Front-end: Access the front-end using the same domain 'localhost' and port 8080.
+
+Indeed, ports 8000 and 8080 are the ports we can access from outside the containers. Inside the containers, the ports are 9428 for the back-end and 4200 for the front-end, but we don't have access to these ports from outside the containers.
+
+## Docker Launches:
+
+- docker-compose: Run the run.sh file that contains the command to launch the compose.
+
+- tests: Modify the 'environment' value in front-end/src/environments because the Docker is not working.
+The tests use ports 4200 for the front-end and 9428 for the back-end. Therefore, the environment URL should be:
+   "http://localhost:9428/api"
+You also need to launch the front-end with the command: "npm run start", and the back-end with the command: "npm run dev".
+Finally, run the command: "npm run test:e2e" to execute the tests.
+
+--
+
+# FLOPPA WEB - Projet PS6 (FR)
 
 ## Notes d'utilisation du site importante
 
 Pour accéder à la partie soignante, il faut saisir un code PIN de base qui sera modifiable dans l'écran suivant.
 Le code secret est "0000".
-
-## Statut lors de la livraison :
-
-- Étape 1 : Done
-- Étape 2 : Done
-- Étape 3 : Commencé mais pas fini
-- Étape 4 : Pas commencé
 
 ## Healthchecks utilisées dans chaque service :
 
