@@ -1,7 +1,7 @@
 Made by a group of students working at [Polytech Nice Sophia](https://polytech.univ-cotedazur.fr/) :
 @marcusaasjensen @rodriguezarthur @ChloeVandenbrulle
 
-# FLOPPA WEB - School Project (EN)
+# FLOPPA WEB - School Project (ENG)
 
 ## Important Site Usage Notes
 
@@ -48,7 +48,7 @@ Finally, run the command: "npm run test:e2e" to execute the tests.
 
 --
 
-# FLOPPA WEB - Projet PS6 (FR)
+# FLOPPA WEB - Projet universitaire (FR)
 
 ## Notes d'utilisation du site importante
 
